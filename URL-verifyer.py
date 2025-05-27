@@ -30,7 +30,7 @@ VERBOSE = False
 # Execution parameters
 DEFAULT_THREADS = 1
 TIMEOUT = 12
-RETRIES = 2
+RETRIES = 1
 DELAY_RANGE = (1, 4)
 
 # Built-in user agents (updated 2024)
@@ -75,7 +75,7 @@ def get_random_headers():
         ]),
         'Accept-Language': random.choice(['en-US,en;q=0.9', 'es-ES,es;q=0.8']),
         'Accept-Encoding': 'gzip, deflate, br',
-        'Connection': random.choice(['keep-alive', 'close']),
+        'Connection': random.choice(['close']), 
         'Cache-Control': random.choice(['max-age=0', 'no-cache'])
     }
 
